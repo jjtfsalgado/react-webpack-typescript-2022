@@ -1,5 +1,6 @@
 module.exports = {
   mode: 'production',
+  devtool: false,
   entry: ['./src/main.tsx'],
   module: {
     rules: require('./webpack.rules'),
@@ -23,6 +24,8 @@ module.exports = {
     sideEffects: true,
     concatenateModules: true,
     runtimeChunk: 'single',
+    mangleExports: "size",
+    mangleWasmImports: true,
     splitChunks: {
       chunks: 'all',
       maxInitialRequests: 10,

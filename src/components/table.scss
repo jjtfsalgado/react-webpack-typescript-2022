@@ -1,0 +1,86 @@
+.header {
+    display: flex;
+    align-items: center;
+    padding: 8px 0;
+
+    .left{
+        flex: 0 0 auto;
+        /*justify-content: left;*/
+    }
+
+    .left > span{
+        padding-right: 8px;
+
+    }
+
+    .spacer{
+        flex: 1;
+    }
+
+    .right{
+        flex: 0 0 auto;
+        /*justify-content: right;*/
+    }
+
+    .controls{
+        flex: 0 0 auto;
+    }
+}
+
+.body{
+    position: relative;
+    display: flex;
+    width: 1000px;
+    height: 620px;
+
+    .table{
+        overflow-x: auto;
+    }
+}
+
+.form{
+    position: absolute;
+    flex: 0 0 240px;
+    z-index: 2;
+    background: white;
+    top: 0; bottom: 0;
+    max-width: 240px;
+    border: 1px solid #DEE0E5;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+
+    &Footer{
+        padding: 16px;
+        display: flex;
+        justify-content: right;
+    }
+
+    //.ant-input{
+    //    margin-bottom: 4px !important;
+    //}
+
+    &Body{
+        display: flex;
+        flex-direction: column;
+        padding: 8px 16px;
+        overflow-y: scroll;
+        flex: 1;
+    }
+
+    &Header{
+        height: 53px;
+        background: #fafafa;
+        border-radius-topleft: 4px;
+        border-radius-topright: 4px;
+        border-bottom: 1px solid #DEE0E5;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        padding: 0 16px;
+        span{
+            flex: 1;
+        }
+    }
+}
+
